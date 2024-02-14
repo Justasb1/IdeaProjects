@@ -39,7 +39,7 @@ public class MateoTest {
 
     }
 @Test
-    public void InformacijosGavimoLaikas(){
+    public void InformacijosGavimoLaikasPozytyvus(){
     Response response = RestAssured
             .when().get("https://api.meteo.lt/v1/places/kaunas/")
             .then().assertThat().log().all()
@@ -53,8 +53,58 @@ public class MateoTest {
             return null;
     }
     @Test
-    public void ArTeisingosKordinates(){
-        
+    public void ArTeisingosKordinatesPozytyvus(){
+        RestAssured.baseURI = "https://api.meteo.lt/v1/";
+        Response response = given()
+                .when().get("places/kaunas")
+                .then().assertThat().log().all()
+                .body("coordinates.latitude", equalTo(54.898212F))
+                .body("coordinates.longitude", equalTo(23.904482F))
+                .extract().response();
+
+
     }
+    @Test
+    public void ArKorektiskasJsonFailasPozytyvus(){
+
+        RestAssured.baseURI = "https://api.meteo.lt/v1/";
+        Response response = given()
+                .when().get("places/kaunas")
+                .then().assertThat().log().all()
+                .body("code", equalTo("kaunas"))
+                .body("name", equalTo("Kaunas"))
+                .body("administrativeDivision", equalTo("Kauno miesto savivaldybė"))
+                .body("countryCode", equalTo("LT"))
+                .extract().response();
+    }
+
+@Test
+    public void InformacijosGavimoLaikasNegatyvus(){
+        RestAssured.baseURI = "https://api.meteo.lt/v1/";
+        Response response = given()
+            .when().get("places/kaunas")
+            .then()
+            .assertThat()
+            .statusCode(HttpsURLConnection.HTTP_OK) // 200
+            .extract().response();
+
+
+    Assertions.assertNotEquals(response.statusCode(), HttpsURLConnection.HTTP_CLIENT_TIMEOUT, "Statuso kodas skiriasi nuo to, kurio tikejomes");;
+    }
+
+    @Test
+    public void ArKorektiskasJsonFailasNegatyvus{
+        R
+        Response response = given()
+
+                .when().get("https://api.meteo.lt/v1/")
+                .then().assertThat()
+                .extract().response();
+
+        float latitude = response.jsonPath().get("coordinates.latitude");
+        float longtitude = response.jsonPath().get("coordinates.longitude");
+
+    }
+
 
 }
