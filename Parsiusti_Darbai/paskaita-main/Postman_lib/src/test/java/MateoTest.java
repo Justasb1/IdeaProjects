@@ -52,5 +52,9 @@ public class MateoTest {
     private RestAssured given() {
             return null;
     }
+    @Test
+    public void ArTeisingosKordinates(){
+        
+    }
 
 }
