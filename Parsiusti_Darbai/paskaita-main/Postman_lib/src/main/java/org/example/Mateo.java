@@ -1,0 +1,8 @@
+package org.example;
+
+public class Mateo {
+    public static void main(String[] args)
+    {
+        System.out.println("API + Maven + Json + Rest");
+    }
+}
