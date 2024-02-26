@@ -27,6 +27,10 @@ public class AirportDAO {
             preparedStatement.executeUpdate();
             System.out.println("Pavyko sukurti nauja irasa");
 
+            //Array list guminis masyvas
+
+
+
             // Geroji praktika atlikus uzklausas uzdaryti prisijungimus prie duomenu bazes.
             preparedStatement.close();
             connection.close();
