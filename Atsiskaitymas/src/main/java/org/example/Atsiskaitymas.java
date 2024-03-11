@@ -1,6 +1,7 @@
 package org.example;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -61,10 +62,22 @@ public class Atsiskaitymas {
     }
 
     public static void Output() {
-        WebElement messageBox = browser.findElement(By.ClassName("msg-good"));
-        WebElement messageBoxNegative = browser.findElement(By.ClassName("msg-bad"));
-        String fieldStatus = "Irasymas " + (messageBox.isDisplayed() && messageBox.isEnabled() ? "Pavyko" : "Nepavyko");
-        String fieldStatusNegative = "Irasymas " + (messageBoxNegative.isDisplayed() && messageBoxNegative.isEnabled() ? "Pavyko" : "Nepavyko");
+        WebElement messageBoxGood = null;
+        try {
+            messageBoxGood = browser.findElement(By.className("msg-good"));
+        } catch (NoSuchElementException e) {}
+
+        WebElement messageBoxBad = null;
+        try {
+            messageBoxBad = browser.findElement(By.className("msg-bad"));
+        } catch (NoSuchElementException e) {}
+
+        String fieldStatus = "NOT FOUND";
+        if (messageBoxGood != null) {
+            fieldStatus = "Irasymas " + (messageBoxGood.isDisplayed() && messageBoxGood.isEnabled() ? "Pavyko" : "Nepavyko");
+        } else if (messageBoxBad != null) {
+            fieldStatus = "Irasymas " + (messageBoxBad.isDisplayed() && messageBoxBad.isEnabled() ? "Pavyko" : "Nepavyko");
+        }
         System.out.println(fieldStatus);
     }
 

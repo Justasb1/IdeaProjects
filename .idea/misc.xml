@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/GUI/pom.xml" />
+        <option value="$PROJECT_DIR$/Mock/pom.xml" />
+        <option value="$PROJECT_DIR$/Pigult/pom.xml" />
+        <option value="$PROJECT_DIR$/Airport/pom.xml" />
+        <option value="$PROJECT_DIR$/Mock_Me/pom.xml" />
+        <option value="$PROJECT_DIR$/Imdb_Api/pom.xml" />
+        <option value="$PROJECT_DIR$/Selenium/pom.xml" />
+        <option value="$PROJECT_DIR$/Api_02_21/pom.xml" />
+        <option value="$PROJECT_DIR$/Atsiskaitymas/pom.xml" />
+        <option value="$PROJECT_DIR$/airport + search/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/Pigu/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/Selenium/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/PiguTest02/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/Selenium01/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/SeleniumBing/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/paskaita-main/Postman_lib/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/PostmanMeteo1/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/Pigu2024_01_15/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/PiguSuFunkcijomis/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/PiguSeleniumTestNG/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/Atsiskaitymas_02_29/pom.xml" />
+        <option value="$PROJECT_DIR$/Parsiusti_Darbai/Baranauskas +TestNG/pom.xml" />
+        <option value="$PROJECT_DIR$/airport_parsiustas/pom.xml" />
+        <option value="$PROJECT_DIR$/Atsiskaitymas_02_29/pom.xml" />
+      </list>
+    </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
