@@ -64,7 +64,7 @@ public class Atsiskaitymas {
     public static void Output() {
         WebElement messageBoxGood = null;
         try {
-            messageBoxGood = browser.findElement(By.className("msg-good"));
+            messageBoxGood = browser.findElement(By.className("msg-good")); //lulmao
         } catch (NoSuchElementException e) {}
 
         WebElement messageBoxBad = null;
